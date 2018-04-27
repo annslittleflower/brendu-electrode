@@ -1,17 +1,29 @@
 .header {
   height: 90px;
-  width: 100%;
-  max-width: 1200px;
   position: fixed;
+  z-index: 100;
+  width: 100%;
+  right: 0;
+  left: 0;
+  top: 0;
   background-color: white;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 
   &__brand {
     font-size: 30px;
     text-transform: uppercase;
+    width: 90px;  /* hack to perfectrly center text, flexbox did not work out here */
   }
+}
+
+.widthHelper {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .hamburger {
@@ -39,5 +51,21 @@
     margin-left: 15px;
     margin-right: 15px;
     display: inline-block;
+  }
+}
+
+.submenu {
+  text-align: center;
+  background-color: white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  &__link {
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    &_active {
+      text-decoration: underline;
+      font-weight: bold;
+    }
   }
 }

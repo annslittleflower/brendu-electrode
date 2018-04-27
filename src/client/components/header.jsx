@@ -20,27 +20,29 @@ export default class Header extends React.Component {
   render() {
     return (
       <header className={headerStyles.header}>
-        <a
-          className={`${headerStyles.hamburger} ${headerStyles.hamburger__link}`}
-          onClick={this.handleHamburgerClick}
-        >
-          <img
-            src={hamburger}
-            className={`${headerStyles.hamburger} ${headerStyles.hamburger__image}`}/>
-        </a>
-        <span className={headerStyles.header__brand}>
-          Brandoo
-        </span>
-        <div className={headerStyles.menuIcons}>
-          <img
-            src={searchIcon}
-            className={`${headerStyles.menuIcons__image}`}
-          />
-          <span className={headerStyles.menuIcons__divider} />
-          <img
-            src={profileIcon}
-            className={`${headerStyles.menuIcons__image}`}
-          />
+        <div className={headerStyles.widthHelper}>
+          <a
+            className={`${headerStyles.hamburger} ${headerStyles.hamburger__link}`}
+            onClick={this.handleHamburgerClick}
+          >
+            <img
+              src={hamburger}
+              className={`${headerStyles.hamburger} ${headerStyles.hamburger__image}`}/>
+          </a>
+          <span className={headerStyles.header__brand}>
+            Brandoo
+          </span>
+          <div className={headerStyles.menuIcons}>
+            <img
+              src={searchIcon}
+              className={`${headerStyles.menuIcons__image}`}
+            />
+            <span className={headerStyles.menuIcons__divider} />
+            <img
+              src={profileIcon}
+              className={`${headerStyles.menuIcons__image}`}
+            />
+          </div>
         </div>
       </header>
     );

@@ -27,6 +27,7 @@
     "npm": ">= 3"
   },
   "scripts": {
+    "dev:hot": "clap hot",
     "build": "clap build",
     "prod-start": "NODE_ENV=production clap -n -x electrode/build prod",
     "start": "if test \"$NODE_ENV\" = \"production\"; then npm run prod-start; else clap dev; fi",
